@@ -1,13 +1,5 @@
 ﻿using AppointmentSystem_DC.Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AppointmentSystem_DC.Forms
 {
@@ -21,7 +13,7 @@ namespace AppointmentSystem_DC.Forms
 
         string doctorFilePath = Application.StartupPath + "\\doctorList.txt";
         string patientFilePath = Application.StartupPath + "\\patientList.txt";
-        string appointmentFilePath = Application.StartupPath + "\\appointmentList.txt"; 
+        string appointmentFilePath = Application.StartupPath + "\\appointmentList.txt";
 
         #endregion
         public frmMainScreen()
@@ -94,7 +86,7 @@ namespace AppointmentSystem_DC.Forms
         {
             List<Appointment> listChanged = new List<Appointment>();
             TreeNode selectedNode = trvList.SelectedNode;
-            object obj=selectedNode.Tag;            
+            object obj = selectedNode.Tag;
 
             if (obj.GetType() == typeof(Patient))
             {
@@ -102,7 +94,7 @@ namespace AppointmentSystem_DC.Forms
 
                 foreach (Appointment item in appointments)
                 {
-                    if (item.Patient==pat)
+                    if (item.Patient == pat)
                     {
                         listChanged.Add(item);
                     }
@@ -322,7 +314,7 @@ namespace AppointmentSystem_DC.Forms
                 MessageBox.Show("Please select an appointment from list below");
                 return;
             }
-        } 
+        }
         private void btnSaveToFile_Click(object sender, EventArgs e)
         {
             List<string> appLines = new List<string>();
@@ -425,7 +417,7 @@ namespace AppointmentSystem_DC.Forms
                     Notes = lineParts[5],
                     DoctorId = lineParts[6]
                 });
-            }            
+            }
 
         }
 

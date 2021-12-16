@@ -1,13 +1,4 @@
 ﻿using AppointmentSystem_DC.Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AppointmentSystem_DC.Forms
 {
@@ -33,7 +24,7 @@ namespace AppointmentSystem_DC.Forms
                 dtpBirthDate.Value = patientSelected.BirthDate;
                 txtPhoneNumber.Text = patientSelected.PhoneNumber;
                 txtEmail.Text = patientSelected.Email;
-                txtNotes.Text= patientSelected.Notes;
+                txtNotes.Text = patientSelected.Notes;
             }
 
         }
@@ -44,13 +35,13 @@ namespace AppointmentSystem_DC.Forms
             foreach (Doctor item in doctorList)
             {
                 cmbDoctorList.Items.Add($"{item.ID}-{item.FullName}");
-               
+
                 if (isEdit)
                 {
                     if (item.ID == patientSelected.DoctorId)
                     {
                         cmbDoctorList.SelectedIndex = doctorList.IndexOf(item);
-                    } 
+                    }
                 }
             }
         }

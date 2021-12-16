@@ -1,13 +1,4 @@
 ﻿using AppointmentSystem_DC.Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AppointmentSystem_DC.Forms
 {
@@ -15,7 +6,7 @@ namespace AppointmentSystem_DC.Forms
     {
         public List<Patient> patientList;
         public List<Doctor> doctorList;
-        public List <Appointment> appointmentList;
+        public List<Appointment> appointmentList;
         public Appointment selectedAppointment;
         public bool isEdit = false;
 
@@ -39,7 +30,7 @@ namespace AppointmentSystem_DC.Forms
 
         }
 
-        private void ComboBoxFilling<T>(List<T> list,ComboBox cmb)
+        private void ComboBoxFilling<T>(List<T> list, ComboBox cmb)
         {
             foreach (T item in list)
             {

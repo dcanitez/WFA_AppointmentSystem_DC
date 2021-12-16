@@ -1,19 +1,10 @@
 ﻿using AppointmentSystem_DC.Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AppointmentSystem_DC.Forms
 {
     public partial class frmDoctorInfo : Form
-    {        
-        public bool IsEdit=false;
+    {
+        public bool IsEdit = false;
         public Doctor selectedDoctor;
         public frmDoctorInfo()
         {
@@ -29,9 +20,9 @@ namespace AppointmentSystem_DC.Forms
                 txtPhoneNumber.Text = selectedDoctor.PhoneNumber;
                 txtEmail.Text = selectedDoctor.Email;
             }
-        }        
+        }
 
-        
+
 
     }
 }
